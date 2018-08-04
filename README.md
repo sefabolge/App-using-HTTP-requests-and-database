@@ -34,3 +34,38 @@ stack exec footaball-exe download (this is to download and store data in the dat
 
 
 *Note: When running download feature, in the database creation step, if a database already exists, the program will check whether data exists in the tables. If yes, the program will delete the old data before entering new data.
+
+
+----------------------------------------------------------------------------------------------------------------------
+# Program’s feature
+
+1. Showing details of corresponding information when users input a stadium name:
+
+● Command: stack exec footaball-exe details stadium “Stadium_name ”
+
+● Information includes Team name, Capacity, Latitude, Longitude, City and Country.
+
+● e.g. stack exec footaball-exe details “Stamford Bridge ”
+
+⇨ Output: Details of Stamford Bridge: Team: Chelsea, Capacity: 42499, Long: 51.481667, Lat: -0.191111, City: London,
+Country: England
+
+(Some stadium names for testing: “Emirates Stadium ”, “Victoria Park ”, “Anoeta ”)
+
+2. Allowing users to update information in the table:
+
+● Command: stack exec footaball-exe update capacity “Stadium_name” new_capacity_value
+
+● Users can input a stadium name and choose to update information of the stadium’s capacity.
+
+● e.g. stack exec footaball-exe update capacity “Anoeta ” 20
+
+⇨ Output: Capacity of Anoeta updated successfully. The capacity of Anoeta changed to 20 from 32076.
+
+For testing: 
+
+stack exec footaball-exe details “Anoeta ” to see its original capacity of 32076 
+
+stack exec footaball-exe update capacity “Anoeta ” 20 to update the capacity 
+
+stack exec footaball-exe details “Anoeta ” again to see its capacity has been updated to 20.

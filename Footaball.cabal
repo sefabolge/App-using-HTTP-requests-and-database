@@ -1,0 +1,71 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: d430f583c8052de6be0356fb42074445c09c0a71a5eb61ee039851c5131c0b7d
+
+name:           Footaball
+version:        0.1.0.0
+synopsis:       Short description of your package
+description:    Please see the README on Github at <https://github.com/githubuser/Footaball#readme>
+homepage:       https://github.com/githubuser/Footaball#readme
+bug-reports:    https://github.com/githubuser/Footaball/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2017 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/Footaball
+
+library
+  hs-source-dirs:
+      src
+  exposed-modules:
+      Database
+      Download
+      Types
+  other-modules:
+      Paths_Footaball
+  build-depends:
+      base >=4.7 && <5
+     , HTTP
+     , network-uri
+     , HDBC
+     , HDBC-sqlite3
+     , dates
+     , text
+  default-language: Haskell2010
+
+executable Footaball-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Footaball
+    , base >=4.7 && <5
+  other-modules:
+      Paths_Footaball
+  default-language: Haskell2010
+
+test-suite Footaball-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      Footaball
+    , base >=4.7 && <5
+  other-modules:
+      Paths_Footaball
+  default-language: Haskell2010

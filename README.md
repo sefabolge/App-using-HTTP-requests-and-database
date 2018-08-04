@@ -1,5 +1,5 @@
 # Football
-During this project, you will implement a Haskell program for harvesting information from the Web and saving it on a database
+During this project, we will implement a Haskell program for harvesting information from the Web and saving it on a database
 
 # Introduction:
 

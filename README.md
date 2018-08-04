@@ -21,7 +21,8 @@ attributes: Country and City. (3 columns in total)
 a. To compile:
 
 ● Firstly, users need to change the directory to the project folder program using cd command..
-● Then, the following commands should be run in order:o
+
+● Then, the following commands should be run in order:
 
   stack setup
   stack build
